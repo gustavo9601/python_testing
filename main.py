@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def fibonacci(number: int) -> int:
+    if number == 0:
+        return 0
+    elif number == 1:
+        return 1
+    else:
+        return fibonacci(number - 1) + fibonacci(number - 2)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def palindromo(word: str) -> bool:
+    sentence = str(word).lower().replace(" ", "")
+    return sentence == sentence[::-1]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def factorial(number: int) -> int:
+    if number == 0:
+        return 1
+    else:
+        return number * factorial(number - 1)
